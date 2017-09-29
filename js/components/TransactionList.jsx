@@ -8,8 +8,8 @@ export default class TransactionList extends React.Component{
     }
     render(){
       
-        const transactionItems=this.props.transactions.map((transaction)=>{
-            return <TransactionItem key={transaction.name} name={transaction.name} amount={transaction.amount}/>
+        const transactionItems=this.props.transactions.map((transaction, index)=>{
+            return <TransactionItem key={index} name={transaction.name} EURO={transaction.EURO} PLN={transaction.PLN}/>
         })
 
         

@@ -16,11 +16,8 @@ export default class ExchangeRate extends React.Component{
         .then(r=>r.json())
         .then(data=>{
             console.log ('fetch')
-            
-            
             this.setState({
-                euro: data[0].rates[7],
-                
+                euro: data[0].rates[7], 
                 loaded: true,
             })
             
@@ -35,7 +32,10 @@ export default class ExchangeRate extends React.Component{
         const exchangeRate=this.state.euro['mid']
         
         return <div>
+               <div>
                1 EURO costs {exchangeRate}PLN
+               </div>
+               <AddTransaction exchangeRate={exchangeRate}/>
                </div>
     }
 }

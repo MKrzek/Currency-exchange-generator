@@ -10,8 +10,8 @@ class App extends React.Component{
         return <div>
                 <Title />
                 <ExchangeRate  />
-                <AddTransaction />
-                {/*<TransactionList />*/}
+                
+               
                
                 </div>
     }}
