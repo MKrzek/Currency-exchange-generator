@@ -1,5 +1,5 @@
 import React from 'react';
-import TransactionItem from './TransactionItem.jsx';
+import TransactionList from './TransactionList.jsx';
 
 export default class AddTransaction extends React.Component{
    constructor(props){
@@ -7,30 +7,31 @@ export default class AddTransaction extends React.Component{
        this.state={
            name:'',
            amount:'',
-           list:[],
+           transactions:[],
 
        }
     }   
-handleNameChange=(e)=>{
+handleNameChange=(event)=>{
+    let nameVal=event.target.value;
     this.setState({
-        name:event.target.value,
+        name:nameVal,
        
         
     })
     console.log (this.state.list)
 }
-handleAmountChange=(e)=>{
+handleAmountChange=(event)=>{
+    let amountVal=event.target.value;
     this.setState({
-        amount: event.target.value,
+        amount: amountVal,
     
     })
    
 }
 handleAdd=(event)=>{
-    let newList=[...this.state.list,{amount:this.amount, name:this.amount}]
     event.preventDefault();
     this.setState({
-        list:newList
+        transactions:[...this.state.transactions, {name: this.state.name, amount: this.state.amount}]
     })
     
 }
@@ -48,7 +49,7 @@ handleAdd=(event)=>{
                     </label>
                     <button onClick={this.handleAdd}>Add this transaction to the list</button>
                 </form>
-                <TransactionItem transaction={this.state.list}/>
+                <TransactionList transactions={this.state.transactions}/>
               </div>
    }
 }

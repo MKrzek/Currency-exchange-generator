@@ -11,8 +11,8 @@ class App extends React.Component{
                 <Title />
                 <ExchangeRate  ExchangeRate='4.33'/>
                 <AddTransaction />
-                <TransactionList/>
-                
+                <TransactionList />
+               
                 </div>
     }}
 
