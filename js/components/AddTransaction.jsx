@@ -6,7 +6,7 @@ export default class AddTransaction extends React.Component{
        super(props);
        this.state={
            name:'',
-           EURO:'',
+           EURO:0,
            transactions:[],
            PLN:0,
           
@@ -37,16 +37,20 @@ handleAmountCalculate=(e)=>{
     })
 }
 handleAdd=(event)=>{
-    
     event.preventDefault();
+    let newTransactions=[...this.state.transactions,{name: this.state.name, EURO: this.state.EURO, PLN:this.state.PLN}]
     this.setState({
        
-        transactions:[...this.state.transactions,{name: this.state.name, EURO: this.state.EURO, PLN:this.state.PLN}],
+        transactions: newTransactions,
     })
     
     
 }
-
+handleRemoveTransaction=(name)=>{
+     this.setState({
+        transactions:this.state.transactions.filter((name)=>transaction.name!==name)
+    })
+}
 
    
    render(){
@@ -54,10 +58,10 @@ handleAdd=(event)=>{
        return <div>
                 <form>
                     <label>Name:
-                        <input type='text' key={this.state.name} value={this.state.name} onChange={this.handleNameChange}/>
+                        <input type='text' value={this.state.name} onChange={this.handleNameChange}/>
                     </label>
                     <label>Amount in Euros:
-                        <input type='number' value={this.state.EURO} onChange={this.handleAmountChange}/>
+                        <input type='number' min='0' value={this.state.EURO} onChange={this.handleAmountChange}/>
                     </label>
                     <label>Amount in Zlotys:
                      <span>
@@ -67,7 +71,7 @@ handleAdd=(event)=>{
                     <button onClick={this.handleAmountCalculate}>Calculate</button>
                     <input type='submit' onClick={this.handleAdd}/>
                 </form>
-                <TransactionList transactions={this.state.transactions}/>
+                <TransactionList transactions={this.state.transactions} onDone={this.handleRemoveTrans}/>
               </div>
    }
 }
