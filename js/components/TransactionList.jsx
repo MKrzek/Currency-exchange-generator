@@ -1,6 +1,6 @@
 import React from 'react';
 import TransactionItem from './TransactionItem.jsx';
-
+import AddTransaction from './AddTransaction.jsx';
 export default class TransactionList extends React.Component{
     constructor (props){
         super(props);

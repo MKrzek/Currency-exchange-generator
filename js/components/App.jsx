@@ -9,9 +9,9 @@ class App extends React.Component{
     render(){
         return <div>
                 <Title />
-                <ExchangeRate  ExchangeRate='4.33'/>
+                <ExchangeRate  />
                 <AddTransaction />
-                <TransactionList />
+                {/*<TransactionList />*/}
                
                 </div>
     }}

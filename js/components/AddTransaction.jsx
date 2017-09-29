@@ -1,6 +1,6 @@
 import React from 'react';
 import TransactionList from './TransactionList.jsx';
-
+import ExchangeRate from './ExchangeRate.jsx';
 export default class AddTransaction extends React.Component{
    constructor(props){
        super(props);
@@ -8,6 +8,7 @@ export default class AddTransaction extends React.Component{
            name:'',
            amount:'',
            transactions:[],
+
 
        }
     }   
@@ -47,6 +48,9 @@ handleAdd=(event)=>{
                     <label>Amount in Euros:
                         <input type='number' value={this.state.number} onChange={this.handleAmountChange}/>
                     </label>
+                     <div>
+                         
+                    </div>
                     <button onClick={this.handleAdd}>Add this transaction to the list</button>
                 </form>
                 <TransactionList transactions={this.state.transactions}/>

@@ -1,25 +1,25 @@
 import React from 'react';
+import AddTransaction from './AddTransaction.jsx';
+
 export default class ExchangeRate extends React.Component{
     constructor (props){
         super(props);
         this.state={
             
             
-            currencies:null,
+            euro:null,
             loaded: false,
         }
     }
-    componentWilllMount(){
+    componentWillMount(){
         fetch('http://api.nbp.pl/api/exchangerates/tables/A/?format=json')
         .then(r=>r.json())
         .then(data=>{
             console.log ('fetch')
-            const currencies=data[0].rates.map((currency)=>{
-                return {label:currency.currency, rate: currency.mid}
-            })
-            console.log (currencies)
+            
+            
             this.setState({
-                currencies: data[0].rates,
+                euro: data[0].rates[7],
                 
                 loaded: true,
             })
@@ -32,7 +32,7 @@ export default class ExchangeRate extends React.Component{
             return null;
         }else{
     
-        const exchangeRate=currencies.currencies['euro']
+        const exchangeRate=this.state.euro['mid']
         
         return <div>
                1 EURO costs {exchangeRate}PLN
