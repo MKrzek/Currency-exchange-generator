@@ -64,7 +64,7 @@ handleRemoveTransaction= (name) =>{
 
 
    render(){
-
+   
        return <div>
                 <form>
                     <label>Name:

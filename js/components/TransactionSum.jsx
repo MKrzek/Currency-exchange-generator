@@ -1,4 +1,5 @@
 import React from 'react';
+import AddTransaction from './AddTransaction.jsx';
 export default class TransactionSum extends React.Component{
      constructor(props){
          super(props);

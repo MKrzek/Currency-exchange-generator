@@ -6,7 +6,7 @@ export default class TransactionItem extends React.Component{
 
     }
     handleRemoveClick=()=>{
-        console.log (this.props.name)
+       
         if (typeof this.props.onDone==='function'){
             this.props.onDone(this.props.name)
         }
