@@ -6,15 +6,17 @@ export default class TransactionItem extends React.Component{
 
     }
     handleRemoveClick=()=>{
+        console.log (this.props.name)
         if (typeof this.props.onDone==='function'){
             this.props.onDone(this.props.name)
         }
+        console.log ('remove click works')
     }
     render(){
         const name=this.props.name;
         const EURO=this.props.EURO;
         const PLN=this.props.PLN;
-        console.log (this.props.name)
+
             return <li>
                     <span >{name}</span>
                     <span >{EURO}euros</span>
@@ -22,5 +24,6 @@ export default class TransactionItem extends React.Component{
                     <button onClick={this.handleRemoveClick}>Remove Transaction</button>
                     </li>
         }
+
 
     }

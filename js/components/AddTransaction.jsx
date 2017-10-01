@@ -48,20 +48,15 @@ handleAdd= event =>{
 }     
 
 
- handleRemoveTransaction=(name)=>{  
-        this.setState({
-        transactions:this.state.transactions.filter((name)=>transaction.name!==name)
-    })
-    console.log ('removed')
- }
 
 
 handleRemoveTransaction= name =>{
-  console.log('name', name);
-     this.setState({
-        transactions:this.state.transactions.filter( name=> transaction.name !== name)
-    })
-}
+    console.log('remove function works');
+       this.setState({
+          transactions:this.state.transactions.filter( transaction => transaction.name !== name)
+      })
+  }
+  
 
 
 
