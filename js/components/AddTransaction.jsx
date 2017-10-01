@@ -9,26 +9,26 @@ export default class AddTransaction extends React.Component{
            EURO:0,
            transactions:[],
            PLN:0,
-          
+
 
        }
-    }   
+
+    }
 handleNameChange=(event)=>{
     let nameVal=event.target.value;
     this.setState({
         name:nameVal,
-       
-        
+
     })
-    console.log (this.state.list)
+
 }
 handleAmountChange=(event)=>{
     let EUROVal=event.target.value;
     this.setState({
         EURO: EUROVal,
-    
+
     })
-   
+
 }
 handleAmountCalculate=(e)=>{
     e.preventDefault()
@@ -36,25 +36,37 @@ handleAmountCalculate=(e)=>{
         PLN: (this.state.EURO * this.props.exchangeRate).toFixed(2),
     })
 }
-handleAdd=(event)=>{
+handleAdd= event =>{
     event.preventDefault();
-    let newTransactions=[...this.state.transactions,{name: this.state.name, EURO: this.state.EURO, PLN:this.state.PLN}]
+    const newTransaction = {name: this.state.name, EURO: this.state.EURO, PLN: this.state.PLN};
+    const newTransactions=[...this.state.transactions, newTransaction ]
     this.setState({
-       
         transactions: newTransactions,
     })
-    
-    
-}
-handleRemoveTransaction=(name)=>{
-          this.setState({
-            transactions:this.state.transactions.filter((name)=>transaction.name!==name)
-        })
-     }
 
-   
+
+}     
+
+
+ handleRemoveTransaction=(name)=>{  
+        this.setState({
+        transactions:this.state.transactions.filter((name)=>transaction.name!==name)
+    })
+    console.log ('removed')
+ }
+
+
+handleRemoveTransaction= name =>{
+  console.log('name', name);
+     this.setState({
+        transactions:this.state.transactions.filter( name=> transaction.name !== name)
+    })
+}
+
+
+
    render(){
-       
+
        return <div>
                 <form>
                     <label>Name:
@@ -71,7 +83,7 @@ handleRemoveTransaction=(name)=>{
                     <button onClick={this.handleAmountCalculate}>Calculate</button>
                     <input type='submit' onClick={this.handleAdd}/>
                 </form>
-                <TransactionList transactions={this.state.transactions} onDone={this.handleRemoveTransanction}/>
+                <TransactionList transactions={this.state.transactions} removeTransaction={this.handleRemoveTransaction}/>
               </div>
    }
 }
