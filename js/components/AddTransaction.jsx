@@ -1,6 +1,9 @@
 import React from 'react';
 import TransactionList from './TransactionList.jsx';
 import ExchangeRate from './ExchangeRate.jsx';
+import TransactionSum from './TransactionSum.jsx';
+import BiggestTransaction from './BiggestTransaction.jsx';
+
 export default class AddTransaction extends React.Component{
    constructor(props){
        super(props);
@@ -36,7 +39,7 @@ handleAmountCalculate=(e)=>{
         PLN: (this.state.EURO * this.props.exchangeRate).toFixed(2),
     })
 }
-handleAdd= event =>{
+handleAdd= (event) =>{
     event.preventDefault();
     const newTransaction = {name: this.state.name, EURO: this.state.EURO, PLN: this.state.PLN};
     const newTransactions=[...this.state.transactions, newTransaction ]
@@ -50,10 +53,10 @@ handleAdd= event =>{
 
 
 
-handleRemoveTransaction= name =>{
+handleRemoveTransaction= (name) =>{
     console.log('remove function works');
        this.setState({
-          transactions:this.state.transactions.filter( transaction => transaction.name !== name)
+          transactions:this.state.transactions.filter( (transaction) => transaction.name !== name)
       })
   }
   
@@ -78,7 +81,15 @@ handleRemoveTransaction= name =>{
                     <button onClick={this.handleAmountCalculate}>Calculate</button>
                     <input type='submit' onClick={this.handleAdd}/>
                 </form>
-                <TransactionList transactions={this.state.transactions} removeTransaction={this.handleRemoveTransaction}/>
+                <div>
+                    <TransactionList transactions={this.state.transactions} removeTransaction={this.handleRemoveTransaction}/>
+                </div>
+                <div>
+                    <BiggestTransaction transactions={this.state.transactions}/>
+                </div>
+                <div>
+                    <TransactionSum transactions={this.state.transactions}/>
+                </div>
               </div>
    }
 }
