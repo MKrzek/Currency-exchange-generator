@@ -9,12 +9,7 @@ export default class TransactionList extends React.Component{
         
     }
     
-     removeTransactions=()=>{
-        if (typeof this.props.onDone==='function'){
-            this.props.onDone(this.props.name)
-        }
-     }   
-    
+     
 
 
     
@@ -24,6 +19,7 @@ export default class TransactionList extends React.Component{
             return<TransactionItem key={index} name={transaction.name}
                                     EURO={transaction.EURO} 
                                     PLN={transaction.PLN}
+                                    index={transaction.index}
                                     onDone={this.removeTransactions}/>
                   
         })

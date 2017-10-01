@@ -47,10 +47,10 @@ handleAdd=(event)=>{
     
 }
 handleRemoveTransaction=(name)=>{
-     this.setState({
-        transactions:this.state.transactions.filter((name)=>transaction.name!==name)
-    })
-}
+          this.setState({
+            transactions:this.state.transactions.filter((name)=>transaction.name!==name)
+        })
+     }
 
    
    render(){
@@ -71,7 +71,7 @@ handleRemoveTransaction=(name)=>{
                     <button onClick={this.handleAmountCalculate}>Calculate</button>
                     <input type='submit' onClick={this.handleAdd}/>
                 </form>
-                <TransactionList transactions={this.state.transactions} onDone={this.handleRemoveTrans}/>
+                <TransactionList transactions={this.state.transactions} onDone={this.handleRemoveTransanction}/>
               </div>
    }
 }
