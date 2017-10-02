@@ -6,12 +6,16 @@ export default class TransactionSum extends React.Component{
 
      }
      render(){
+     let sumPLN=0;
+     let sumEURO=0;
+
+    
          return <div>
                   <div>
-                    The sum of all PLN transactions is 
+                    The sum of all PLN transactions: {sumPLN} 
                   </div>
                   <div>
-                      The sum in of all EURO transactions is 
+                      The sum in of all EURO transactions: {sumEURO} 
                   </div>
                 </div>
      }
