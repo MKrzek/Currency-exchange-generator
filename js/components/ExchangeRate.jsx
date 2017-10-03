@@ -31,9 +31,9 @@ export default class ExchangeRate extends React.Component{
     
         const exchangeRate=this.state.euro['mid']
         
-        return <div>
-               <div>
-               1 EURO costs {exchangeRate}PLN
+        return <div >
+               <div className='exchangeRate'>
+               1 EURO costs {exchangeRate} PLN
                </div>
                <AddTransaction exchangeRate={exchangeRate}/>
                </div>

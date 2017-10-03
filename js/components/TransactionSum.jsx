@@ -3,7 +3,7 @@ import AddTransaction from './AddTransaction.jsx';
 export default class TransactionSum extends React.Component{
      constructor(props){
          super(props);
-
+        
      }
      
      render(){
@@ -15,15 +15,19 @@ export default class TransactionSum extends React.Component{
      for (let i=0; i<this.props.transactions.length;i++){
          sumEURO= parseInt(sumEURO) + parseInt(this.props.transactions[i].EURO)
      }
-   
-    
-         return <div>
+     
+     if (this.props.render==false){
+         return null
+     }else{
+        return <div className='sumTransaction'>
                   <div>
-                    The sum of all PLN transactions:{sumPLN} 
+                    The sum of all PLN transactions:
+                          <div className='sumTransactionPln'>{sumPLN}</div>
                   </div>
                   <div>
-                      The sum in of all EURO transactions: {sumEURO} 
+                      The sum in of all EURO transactions: 
+                         <div className='sumTransactionEuro'>{sumEURO}</div>
                   </div>
                 </div>
      }
-}
+}}

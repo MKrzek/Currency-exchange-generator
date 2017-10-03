@@ -1,0 +1,129 @@
+button{
+    border-radius: 7px;
+    height: 4vh;
+    width: 44vw;
+}
+.app{
+    background-color: rgb(73.7%, 56.1%, 56.1%);
+}
+
+
+.title{
+    text-align: center;
+    padding-top: 3vw;
+    padding-bottom: 1vw;
+}
+.exchangeRate{
+    text-align:center;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border: 2px solid rgb(181, 171, 171);
+    margin-left: 20vw;
+    margin-right:20vw;
+}
+.transactionName{
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-left:6vw;
+    
+}
+
+
+.transactionNameInput{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.euroAmount{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 10vw;
+}
+
+.transactionEuroAmount{
+   margin-top: 1vh;
+   margin-bottom: 1vh;
+}
+.calculateButton{
+    border: 2px solid rgb(181, 171, 171);
+    margin-left: 26vw;
+    margin-bottom: 2vh;
+}
+.zlotysAmount{
+    margin-left: 33vw;
+    
+}
+.zlotysAmountCalculated{
+    margin-top: 2vh;
+   
+    margin-bottom: 1vh;
+    font-weight: bold;
+    text-align:center;
+}
+.submitButton{
+    border: 2px solid rgb(181, 171, 171);
+    margin-left: 26vw;
+    margin-bottom:5vh;
+    margin-top: 2vh;
+}
+
+/*Transaction Item*/
+.removeButton{
+    border: 2px solid rgb(181, 171, 171);
+   
+    
+}
+.transactionItem{
+  margin-left: 3vw;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: row;
+}
+.transactionItemName{
+    margin-left:0;
+}
+.transactionItemEuro{
+    margin-left: 2vw;
+    margin-right: 2vw
+}
+
+.transactionItemPln{
+    margin-left: 2vw;
+    margin-right:4vw;
+}
+/*biggest Transactiom*/
+
+.biggestTransaction{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.biggestTransactionName{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:1vh;
+
+}
+.biggestTransactionAmount{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:1vh;
+}
+/*Sum Transaction*/
+.sumTransaction{
+    text-align: center;
+}
+
+.sumTransactionPln{
+font-weight: bold;
+text-align: center;
+margin-bottom:1vh;
+}
+
+.sumTransactionEuro{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:1vh;
+}
+
+@min

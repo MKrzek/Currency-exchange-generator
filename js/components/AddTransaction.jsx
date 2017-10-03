@@ -9,9 +9,10 @@ export default class AddTransaction extends React.Component{
        super(props);
        this.state={
            name:'',
-           EURO:0,
+           EURO:'',
            transactions:[],
-           PLN:0,
+           PLN:'',
+           render: false,
 
 
        }
@@ -45,6 +46,7 @@ handleAdd= (event) =>{
     const newTransactions=[...this.state.transactions, newTransaction ]
     this.setState({
         transactions: newTransactions,
+        render: true,
     })
 
 
@@ -65,30 +67,38 @@ handleRemoveTransaction= (name) =>{
 
    render(){
    
-       return <div>
-                <form>
-                    <label>Name:
-                        <input type='text' value={this.state.name} onChange={this.handleNameChange}/>
+       return <div> 
+                 <form className='container'>
+                   
+                    <label className='transactionName'>Name of the transaction:
+                        <input className='transactionNameInput' type='text' value={this.state.name} onChange={this.handleNameChange}/>
                     </label>
-                    <label>Amount in Euros:
-                        <input type='number' min='0' value={this.state.EURO} onChange={this.handleAmountChange}/>
-                    </label>
-                    <label>Amount in Zlotys:
-                     <span>
-                         {this.state.PLN}
-                    </span>
-                    </label>
-                    <button onClick={this.handleAmountCalculate}>Calculate</button>
-                    <input type='submit' onClick={this.handleAdd}/>
-                </form>
+                    <label className='euroAmount'>Amount in Euros:
+                        <input className='transactionEuroAmount' type='number' min='0' value={this.state.EURO} onChange={this.handleAmountChange}/>
+                    </label>   
+                    </form>
+               
                 <div>
-                    <TransactionList transactions={this.state.transactions} removeTransaction={this.handleRemoveTransaction}/>
+                      <button  className='calculateButton' onClick={this.handleAmountCalculate}>Calculate</button>
                 </div>
                 <div>
-                    <BiggestTransaction transactions={this.state.transactions}/>
+                    <label className='zlotysAmount'>Amount in Zlotys:
+                         <div className='zlotysAmountCalculated'>
+                                 {this.state.PLN}
+                        </div>
+                    </label>
                 </div>
                 <div>
-                    <TransactionSum transactions={this.state.transactions}/>
+                    <button  className='submitButton' type='submit' onClick={this.handleAdd}>Add to the transaction list</button>
+                </div>
+               <div>
+                    <TransactionList transactions={this.state.transactions} removeTransaction={this.handleRemoveTransaction} />
+                </div>
+                <div>
+                    <BiggestTransaction transactions={this.state.transactions} render={this.state.render}/>
+                </div>
+                <div>
+                    <TransactionSum transactions={this.state.transactions} render={this.state.render}/>
                 </div>
               </div>
    }

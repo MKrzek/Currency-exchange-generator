@@ -25,9 +25,9 @@ export default class TransactionList extends React.Component{
 
         
 
-        return <ul>
+        return <ol>
                {transactionItems}
-               </ul>
+               </ol>
     }
 }
 

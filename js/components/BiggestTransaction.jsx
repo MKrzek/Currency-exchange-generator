@@ -4,11 +4,11 @@ export default class BiggestTransaction extends React.Component{
      constructor(props){
          super(props);
         
-     }
-     
+    }
          
     
      render(){
+       
          let maxName='';
          let maxPLN=this.props.transactions.reduce((a, b)=>(a.PLN>b.PLN)? a.PLN : b.PLN, 0);
          for (let i=0; i<this.props.transactions.length; i++ ){
@@ -18,14 +18,14 @@ export default class BiggestTransaction extends React.Component{
             
          }
          
-         {/*maxPLN=Math.max.apply (Math, this.props.transactions.map((transaction)=>{
+         /*maxPLN=Math.max.apply (Math, this.props.transactions.map((transaction)=>{
              return transaction.PLN
-         }))*/}
+         }))*/
          
         
          
          
-        {/*for (let i=0; i<this.props.transactions.length; i++){
+        /*for (let i=0; i<this.props.transactions.length; i++){
           if (this.props.transactions[i].PLN >maxPLN){
               maxPLN=this.props.transactions[i].PLN
               
@@ -33,15 +33,20 @@ export default class BiggestTransaction extends React.Component{
               console.log (maxName)
           }
         }
-    console.log (maxPLN)*/}
-    
-         return <div>
+    console.log (maxPLN)*/
+        if (this.props.render==false){
+            return null
+            }else{
+                return <div className='biggestTransaction'>
                      <div>
-                         The biggest transaction in PLN: {maxName}
+                         The biggest transaction in PLN:
+                           <div className='biggestTransactionName'>{maxName}</div>
                      </div>
                      <div>
-                         The value of the biggest transaction in PLN is {maxPLN} zloty.
+                         The value of the biggest transaction in PLN 
+                             <div className='biggestTransactionAmount'>{maxPLN} </div>
                      </div>
                 </div>
      }
+}
 }

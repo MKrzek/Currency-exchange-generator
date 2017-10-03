@@ -17,11 +17,13 @@ export default class TransactionItem extends React.Component{
         const EURO=this.props.EURO;
         const PLN=this.props.PLN;
 
-            return <li>
-                    <span >{name}</span>
-                    <span >{EURO}euros</span>
-                    <span >{PLN}zl</span>
-                    <button onClick={this.handleRemoveClick}>Remove Transaction</button>
+            return <li className='transactionItem'>
+                       
+                    <span className='transactionItemName'><strong>{name}</strong></span>
+                    <span className='transactionItemEuro'>{EURO}€</span>
+                    <span className='transactionItemPln'>{PLN}PLN</span>
+                    <button className='removeButton' onClick={this.handleRemoveClick}>Remove This Transaction</button>
+                     
                     </li>
         }
 

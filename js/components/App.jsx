@@ -7,13 +7,10 @@ import TransactionList from './TransactionList.jsx';
 
 class App extends React.Component{
     render(){
-        return <div>
+        return <div className='app'>
                 <Title />
                 <ExchangeRate  />
-                
-               
-               
-                </div>
+               </div>
     }}
 
 
