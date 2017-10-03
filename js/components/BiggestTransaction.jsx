@@ -15,7 +15,7 @@ export default class BiggestTransaction extends React.Component{
             if (this.props.transactions[i].PLN=maxPLN){
                 maxName=this.props.transactions[i].name
             }
-            console.log (maxName)
+            
          }
          
          {/*maxPLN=Math.max.apply (Math, this.props.transactions.map((transaction)=>{

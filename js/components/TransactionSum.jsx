@@ -5,14 +5,21 @@ export default class TransactionSum extends React.Component{
          super(props);
 
      }
+     
      render(){
-     let sumPLN=0;
+     let sumPLN=0
+     for (let i=0; i<this.props.transactions.length; i++){
+          sumPLN= (parseFloat(sumPLN) + parseFloat(this.props.transactions[i].PLN)).toFixed(2)
+     }
      let sumEURO=0;
-
+     for (let i=0; i<this.props.transactions.length;i++){
+         sumEURO= parseInt(sumEURO) + parseInt(this.props.transactions[i].EURO)
+     }
+   
     
          return <div>
                   <div>
-                    The sum of all PLN transactions: {sumPLN} 
+                    The sum of all PLN transactions:{sumPLN} 
                   </div>
                   <div>
                       The sum in of all EURO transactions: {sumEURO} 

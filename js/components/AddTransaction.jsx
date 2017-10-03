@@ -1,8 +1,8 @@
 import React from 'react';
 import TransactionList from './TransactionList.jsx';
 import ExchangeRate from './ExchangeRate.jsx';
-import TransactionSum from './TransactionSum.jsx';
 import BiggestTransaction from './BiggestTransaction.jsx';
+import TransactionSum from './TransactionSum.jsx';
 
 export default class AddTransaction extends React.Component{
    constructor(props){
