@@ -43,13 +43,14 @@ handleAmountCalculate=(e)=>{
 handleAdd= (event) =>{
     event.preventDefault();
     const newTransaction = {name: this.state.name, EURO: this.state.EURO, PLN: this.state.PLN};
+   
     const newTransactions=[...this.state.transactions, newTransaction ]
     this.setState({
         transactions: newTransactions,
         render: true,
     })
 
-
+   console.log (this.state.transactions)
 }     
 
 

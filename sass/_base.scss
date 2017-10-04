@@ -24,7 +24,7 @@ button{
 .transactionName{
     margin-bottom: 1vh;
     margin-top: 1vh;
-    margin-left:6vw;
+    margin-left:1vw;
     
 }
 
@@ -48,9 +48,10 @@ button{
     border: 2px solid rgb(181, 171, 171);
     margin-left: 26vw;
     margin-bottom: 2vh;
+    font-size: 2vh;
 }
 .zlotysAmount{
-    margin-left: 33vw;
+    margin-left: 30vw;
     
 }
 .zlotysAmountCalculated{
@@ -64,7 +65,7 @@ button{
     border: 2px solid rgb(181, 171, 171);
     margin-left: 26vw;
     margin-bottom:5vh;
-    margin-top: 2vh;
+    
 }
 
 /*Transaction Item*/
@@ -89,7 +90,7 @@ button{
 
 .transactionItemPln{
     margin-left: 2vw;
-    margin-right:4vw;
+    margin-right:3vw;
 }
 /*biggest Transactiom*/
 
@@ -126,4 +127,3 @@ margin-bottom:1vh;
     margin-bottom:1vh;
 }
 
-@min

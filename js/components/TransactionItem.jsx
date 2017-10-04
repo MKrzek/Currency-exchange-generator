@@ -19,7 +19,7 @@ export default class TransactionItem extends React.Component{
 
             return <li className='transactionItem'>
                        
-                    <span className='transactionItemName'><strong>{name}</strong></span>
+                    <span className='transactionItemName'>{name}</span>
                     <span className='transactionItemEuro'>{EURO}€</span>
                     <span className='transactionItemPln'>{PLN}PLN</span>
                     <button className='removeButton' onClick={this.handleRemoveClick}>Remove This Transaction</button>

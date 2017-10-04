@@ -8,32 +8,33 @@ export default class BiggestTransaction extends React.Component{
          
     
      render(){
-       
-         let maxName='';
-         let maxPLN=this.props.transactions.reduce((a, b)=>(a.PLN>b.PLN)? a.PLN : b.PLN, 0);
-         for (let i=0; i<this.props.transactions.length; i++ ){
-            if (this.props.transactions[i].PLN=maxPLN){
+        const maxPLN=Math.max.apply (Math, this.props.transactions.map((transaction)=>
+            transaction.PLN))
+         console.log(maxPLN)
+         console.log (this.props.transactions)
+         
+        {/*const maxName=this.props.transactions.forEach((transaction)=>{
+            if (transaction.PLN===maxPLN){
+                transaction.name
+            }
+        })*/}
+        {/* const maxTrans=this.props.transactions.filter((transaction)=>transaction.PLN===maxPLN)
+        const maxName=maxTrans.map((element)=>
+        element.name)*/}
+        let maxName='';
+        for (let i=0; i<this.props.transactions.length;i++){
+            if (this.props.transactions[i].PLN ===maxPLN){
                 maxName=this.props.transactions[i].name
             }
-            
-         }
+        }
+        
+        
          
-         /*maxPLN=Math.max.apply (Math, this.props.transactions.map((transaction)=>{
-             return transaction.PLN
-         }))*/
+   
          
         
          
-         
-        /*for (let i=0; i<this.props.transactions.length; i++){
-          if (this.props.transactions[i].PLN >maxPLN){
-              maxPLN=this.props.transactions[i].PLN
-              
-              maxName=this.props.transactions[i].name
-              console.log (maxName)
-          }
-        }
-    console.log (maxPLN)*/
+        
         if (this.props.render==false){
             return null
             }else{
