@@ -50,7 +50,7 @@ handleAdd= (event) =>{
         render: true,
     })
 
-   console.log (this.state.transactions)
+   
 }     
 
 
