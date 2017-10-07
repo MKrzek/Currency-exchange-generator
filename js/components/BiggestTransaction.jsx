@@ -10,8 +10,8 @@ export default class BiggestTransaction extends React.Component{
      render(){
         const maxPLN=Math.max.apply (Math, this.props.transactions.map((transaction)=>
             transaction.PLN))
-         console.log(maxPLN)
-         console.log (this.props.transactions)
+         {/*console.log(maxPLN)
+         console.log (this.props.transactions)*/}
          
         {/*const maxName=this.props.transactions.forEach((transaction)=>{
             if (transaction.PLN===maxPLN){
@@ -23,16 +23,16 @@ export default class BiggestTransaction extends React.Component{
         element.name)*/}
         let maxName='';
         for (let i=0; i<this.props.transactions.length;i++){
-            console.log (this.props.transactions[i])
+            {/*console.log (this.props.transactions[i])
             console.log (this.props.transactions[i].PLN)
             console.log (maxPLN)
-            console.log (parseFloat(this.props.transactions[i].PLN)===parseFloat(maxPLN))
+            console.log (parseFloat(this.props.transactions[i].PLN)===parseFloat(maxPLN))*/}
             if (parseFloat(this.props.transactions[i].PLN)===maxPLN){
-                console.log (this.props.transactions[i].PLN)
+               
                 maxName=this.props.transactions[i].name
-                console.log (maxName)
+                
             }
-            console.log (maxName)
+           
         }
         
         
@@ -42,7 +42,7 @@ export default class BiggestTransaction extends React.Component{
         
          
         
-        if (this.props.render==false){
+        if (this.props.render==false||this.props.transactions.length===0){
             return null
             }else{
                 return <div className='biggestTransaction'>

@@ -43,12 +43,25 @@ handleAmountCalculate=(e)=>{
 handleAdd= (event) =>{
     event.preventDefault();
     const newTransaction = {name: this.state.name, EURO: this.state.EURO, PLN: this.state.PLN};
-   
-    const newTransactions=[...this.state.transactions, newTransaction ]
-    this.setState({
-        transactions: newTransactions,
+    const newTransactions=[...this.state.transactions, newTransaction]
+    const storedTransactions=localStorage.getItem(newTransaction)
+    console.log (storedTransactions)
+    console.log (localStorage.newTransactions)
+    if (storedTransactions){
+        this.setState({
+        transactions: JSON.parse(storedTransactions),
         render: true,
     })
+    }else{localStorage.setItem('newTransactions', JSON.stringify(newTransactions));
+         this.setState({
+             transactions: newTransactions,
+             render: true,
+         })
+         console.log ('newTransactions')
+
+    }
+
+    
 
    
 }     
@@ -61,6 +74,7 @@ handleRemoveTransaction= (name) =>{
        this.setState({
           transactions:this.state.transactions.filter( (transaction) => transaction.name !== name)
       })
+     
   }
   
 

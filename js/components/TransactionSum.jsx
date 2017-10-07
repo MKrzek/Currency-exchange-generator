@@ -16,7 +16,7 @@ export default class TransactionSum extends React.Component{
          sumEURO= parseInt(sumEURO) + parseInt(this.props.transactions[i].EURO)
      }
      
-     if (this.props.render==false){
+     if (this.props.render==false||this.props.transactions.length===0){
          return null
      }else{
         return <div className='sumTransaction'>
