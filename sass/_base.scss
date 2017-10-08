@@ -31,6 +31,28 @@ button{
     .transactionName{
     margin-left: 10vw;
 }}
+@media(min-width:600px){
+    .transactionName{
+        margin-left: 12vw;
+}}
+@media(min-width:768px){
+    .transactionName{
+        margin-left: 5vw;
+        font-size: 3vh;    
+    }
+    .euroAmount{
+        font-size: 3vh;
+        margin-left: 6vw;
+}}
+
+@media(min-width:1024px){
+    .transactionName{
+        margin-left: 14vw;
+    }
+    .zlotysAmount{
+        margin-left:44vw;
+    }
+}
 
 
 .transactionNameInput{
@@ -55,13 +77,28 @@ button{
     font-size: 2vh;
     width: 24vw;
 }
+@media(min-width: 768px){
+    .calculateButton{
+        font-size: 2.5vh;
+        width: 16vw;
+        margin-left: 43vw;
+    }}
+
 .zlotysAmount{
     margin-left: 30vw;   
+    
 }
 @media(min-width: 480px){
     .zlotysAmount{
   margin-left: 37vw;
 }}
+@media(min-width: 768px){
+    .zlotysAmount{
+        margin-left: 42vw;
+        font-size:3vh;
+    }
+}
+
 .zlotysAmountCalculated{
     margin-top: 2vh;
    
@@ -71,17 +108,26 @@ button{
 }
 .submitButton{
     border: 2px solid rgb(181, 171, 171);
-    margin-left: 26vw;
+    margin-left: 30vw;
     margin-bottom:5vh;
     width: 37vw;
     font-size: 2vh;
+    height:7vh;
     
+}
+@media(min-width:768px){
+    .submitButton{
+        font-size: 2.5vh;
+        width: 29vw;
+        margin-left: 36vw;
+    }
 }
 
 /*Transaction Item*/
 .removeButtonSpan{
    text-align: right;
-    margin-left: 19vw;
+    margin-right:0;
+    margin-left:0;
    
   
     
@@ -89,12 +135,16 @@ button{
 .removeButton{
     border: 2px solid rgb(181, 171, 171);
     width: 17vw;
+    margin-right:-38vw;
+    margin-left:0;
 }
 @media(min-width: 480px){
     .removeButton{
     font-size: 2vh;
     }
 }
+
+
 .transactionItem{
   margin-left: 3vw;
   margin-right: 3vw;
@@ -104,17 +154,50 @@ button{
   border: 1px solid grey;
   
 }
+@media(min-width: 600px){
+    .transactionItem{
+    margin-left: 13vw;
+    margin-right: 19vw;
+}
+    .removeButton{
+    margin-right:-26vw;
+    }
+}
+@media(min-width:768px){
+    .transactionItem{
+        margin-right: 21vw;
+        margin-left: 23vw;
+    }
+    .removeButton{
+        width:13vw;
+        font-size:2vh;
+    }
+}
+@media(min-width:1024px){
+    .transactionItem{
+        margin-right: 26vw;
+    }
+    .removeButton{
+        width:11vw;
+        font-size:2.5vh;
+    }}
+
+
 .transactionItemName{
     margin-left:0;
-    display: table-cell;
+    text-align: right;
+    
 }
 .transactionItemEuro{
-    padding-left: 4vw;
+    padding-left: 3vw;
+    text-align: right;
     
 }
 
 .transactionItemPln{
     padding-left: 6vw;
+    margin-right: 0;
+    text-align: right;
     
 }
 /*biggest Transactiom*/
