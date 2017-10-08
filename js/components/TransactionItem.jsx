@@ -22,7 +22,7 @@ export default class TransactionItem extends React.Component{
                     <span className='transactionItemName'>{name}</span>
                     <span className='transactionItemEuro'>{EURO}€</span>
                     <span className='transactionItemPln'>{PLN}PLN</span>
-                    <button className='removeButton' onClick={this.handleRemoveClick}>Remove This Transaction</button>
+                    <span className='removeButtonSpan'><button className='removeButton' onClick={this.handleRemoveClick}>Remove</button></span>
                      
                     </li>
         }

@@ -10,25 +10,28 @@ export default class AddTransaction extends React.Component{
        this.state={
            name:'',
            EURO:'',
-           transactions:[],
+           
            PLN:'',
            render: false,
        }
+       let storedTransactions=localStorage.getItem('newTransactions') || [];
+       if (storedTransactions){
+           this.state={
+            transactions: JSON.parse(storedTransactions),
+            render:true,
+           }
+       }
 
-    }
+       }
+ 
+
 handleNameChange=(event)=>{
     let nameVal=event.target.value;
     this.setState({
         name:nameVal,
 
     })
-    const storedTransactions=localStorage.getItem('newTransactions') || []; 
-    if (storedTransactions) {
-           this.setState({
-           transactions: JSON.parse(storedTransactions),
-           render:true,
-       })
-}
+    
 
 }
 handleAmountChange=(event)=>{
@@ -48,8 +51,6 @@ handleAmountCalculate=(e)=>{
 }
 handleAdd= (event) =>{
     event.preventDefault();
-     
-  
         const newTransaction = {name: this.state.name, EURO: this.state.EURO, PLN: this.state.PLN};
         const newTransactions=[...this.state.transactions, newTransaction];
         localStorage.setItem('newTransactions', JSON.stringify(newTransactions))
@@ -63,10 +64,19 @@ handleAdd= (event) =>{
 
 handleRemoveTransaction= (name) =>{
     console.log('remove function works');
-       this.setState({
+       {/*this.setState({
           transactions:this.state.transactions.filter( (transaction) => transaction.name !== name)
-      }) 
+      }) */}
+    let storedTransactions=JSON.parse(localStorage.getItem('newTransactions'));
+    storedTransactions=storedTransactions.filter((transaction)=>transaction.name!==name)
+    localStorage.setItem('newTransactions', JSON.stringify(storedTransactions));
+    this.setState({
+        transactions: storedTransactions,
+    })
+
   }
+
+
    render(){
    
        return <div> 
