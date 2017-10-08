@@ -24,7 +24,7 @@ button{
 .transactionName{
     margin-bottom: 1vh;
     margin-top: 1vh;
-    margin-left:1vw;
+    margin-left:6vw;
     
 }
 @media(min-width: 480px){
@@ -44,6 +44,17 @@ button{
         font-size: 3vh;
         margin-left: 6vw;
 }}
+@media(min-width: 800px){
+    .transactionName{
+        margin-left: 8vw;
+    }
+}
+@media(min-width: 900px){
+    .transactionName{
+        margin-left: 13vw;
+    }
+}
+
 
 @media(min-width:1024px){
     .transactionName{
@@ -141,8 +152,7 @@ button{
 @media(min-width: 480px){
     .removeButton{
     font-size: 2vh;
-    }
-}
+    }}
 
 
 .transactionItem{
@@ -152,8 +162,15 @@ button{
   display: flex;
   flex-direction: row;
   border: 1px solid grey;
-  
 }
+@media(min-width:480px){
+    .transactionItem{
+        margin-left: 8vw;
+        margin-right: 14vw;
+    }
+}
+
+
 @media(min-width: 600px){
     .transactionItem{
     margin-left: 13vw;
@@ -184,20 +201,21 @@ button{
 
 
 .transactionItemName{
-    margin-left:0;
-    text-align: right;
+    margin-left:3vw;
+    padding-top: 0.5vh;
+
     
 }
 .transactionItemEuro{
     padding-left: 3vw;
-    text-align: right;
+   padding-top:0.5vh;
     
 }
 
 .transactionItemPln{
     padding-left: 6vw;
     margin-right: 0;
-    text-align: right;
+    padding-top: 0.5vh;
     
 }
 /*biggest Transactiom*/
