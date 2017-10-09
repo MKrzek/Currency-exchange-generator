@@ -35,7 +35,7 @@ handleNameChange=(event)=>{
 
 }
 handleAmountChange=(event)=>{
-    let EUROVal=event.target.value;
+    let EUROVal=event.target.value.replace("^-?(?!0.)\\d+$");
     this.setState({
         EURO: EUROVal,
 
