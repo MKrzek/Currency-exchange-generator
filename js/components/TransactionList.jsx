@@ -5,14 +5,8 @@ import TransactionItem from './TransactionItem.jsx';
 export default class TransactionList extends React.Component{
     constructor (props){
         super(props);
-        
-        
+          
     }
-    
-     
-
-
-    
     render(){
       
         const transactionItems=this.props.transactions.map((transaction, index)=>{

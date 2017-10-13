@@ -11,24 +11,17 @@ export default class AddTransaction extends React.Component{
            name:'',
            EURO:'',
            PLN:'',
-           render: false,
-           transactions:[],
+           render: this.props.render,
+           transactions:this.props.storedTransactions,
        }
-       const storedTransactions=JSON.parse(localStorage.getItem('newTransactions')) || [];
-       if (storedTransactions){
-           this.state={
-            transactions:storedTransactions,
-            render:true,
-           }
-       }
+       
 
-       }
+ }
 
 handleNameChange=(event)=>{
     let nameVal=event.target.value;
     this.setState({
         name:nameVal,
-
     })
     
 
@@ -49,7 +42,7 @@ handleAmountCalculate=(e)=>{
     
 }
 handleAdd= (event) =>{
-    event.preventDefault();
+    event.preventDefault(); 
         const newTransaction = {name: this.state.name, EURO: this.state.EURO, PLN: this.state.PLN};
         const newTransactions=[...this.state.transactions, newTransaction];
         localStorage.setItem('newTransactions', JSON.stringify(newTransactions))
