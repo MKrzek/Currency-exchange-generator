@@ -10,14 +10,13 @@ export default class AddTransaction extends React.Component{
        this.state={
            name:'',
            EURO:'',
-           
            PLN:'',
            render: false,
        }
-       let storedTransactions=localStorage.getItem('newTransactions') || [];
+       const storedTransactions=JSON.parse(localStorage.getItem('newTransactions')) || [];
        if (storedTransactions){
            this.state={
-            transactions: JSON.parse(storedTransactions),
+            transactions:storedTransactions,
             render:true,
            }
        }
