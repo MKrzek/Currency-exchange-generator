@@ -12,6 +12,7 @@ export default class AddTransaction extends React.Component{
            EURO:'',
            PLN:'',
            render: false,
+           transactions:[],
        }
        const storedTransactions=JSON.parse(localStorage.getItem('newTransactions')) || [];
        if (storedTransactions){
@@ -22,7 +23,6 @@ export default class AddTransaction extends React.Component{
        }
 
        }
- 
 
 handleNameChange=(event)=>{
     let nameVal=event.target.value;
