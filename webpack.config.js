@@ -7,9 +7,8 @@ module.exports = {
       
    },
    output : {
-       path:path.join( __dirname, 'public/'),
-       filename: '[name].js',
-       publicPath: '/public/',
+       path: __dirname+'/',
+       filename: '[name]'
    },
    devServer: {
       inline: true,
@@ -47,7 +46,9 @@ module.exports = {
         ]
     },
     plugins: [
-       new ExtractTextPlugin('./public/css/style.css')
+       new ExtractTextPlugin('./public/css/style.css'),
+       
+       
 
    ]
 };
