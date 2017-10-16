@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+img, video, canvas {
+  max-width: 100%; }
+
+button {
+  border-radius: 7px;
+  height: 4vh; }
+
+.app {
+  background-color: rosybrown; }
+
+.title {
+  text-align: center;
+  padding-top: 3vw;
+  padding-bottom: 1vw; }
+
+.exchangeRate {
+  text-align: center;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  border: 2px solid #b5abab;
+  margin-left: 20vw;
+  margin-right: 20vw; }
+
+.transactionName {
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+  margin-left: 6vw; }
+
+@media (min-width: 480px) {
+  .transactionName {
+    margin-left: 10vw; } }
+
+@media (min-width: 600px) {
+  .transactionName {
+    margin-left: 12vw; } }
+
+@media (min-width: 768px) {
+  .transactionName {
+    margin-left: 5vw;
+    font-size: 3vh; }
+  .euroAmount {
+    font-size: 3vh;
+    margin-left: 6vw; } }
+
+@media (min-width: 800px) {
+  .transactionName {
+    margin-left: 8vw; } }
+
+@media (min-width: 900px) {
+  .transactionName {
+    margin-left: 13vw; } }
+
+@media (min-width: 1024px) {
+  .transactionName {
+    margin-left: 14vw; }
+  .zlotysAmount {
+    margin-left: 44vw; } }
+
+.transactionNameInput {
+  margin-top: 1vh;
+  margin-bottom: 1vh; }
+
+.euroAmount {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 10vw; }
+
+.transactionEuroAmount {
+  margin-top: 1vh;
+  margin-bottom: 1vh; }
+
+.calculateButton {
+  border: 2px solid #b5abab;
+  margin-left: 37vw;
+  margin-bottom: 2vh;
+  font-size: 2vh;
+  width: 24vw; }
+
+@media (min-width: 768px) {
+  .calculateButton {
+    font-size: 2.5vh;
+    width: 16vw;
+    margin-left: 43vw; } }
+
+.zlotysAmount {
+  margin-left: 30vw; }
+
+@media (min-width: 480px) {
+  .zlotysAmount {
+    margin-left: 37vw; } }
+
+@media (min-width: 768px) {
+  .zlotysAmount {
+    margin-left: 42vw;
+    font-size: 3vh; } }
+
+.zlotysAmountCalculated {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  font-weight: bold;
+  text-align: center; }
+
+.submitButton {
+  border: 2px solid #b5abab;
+  margin-left: 30vw;
+  margin-bottom: 5vh;
+  width: 37vw;
+  font-size: 2vh;
+  height: 7vh; }
+
+@media (min-width: 768px) {
+  .submitButton {
+    font-size: 2.5vh;
+    width: 29vw;
+    margin-left: 36vw; } }
+
+/*Transaction Item*/
+.removeButtonSpan {
+  text-align: right;
+  margin-right: 0;
+  margin-left: 0; }
+
+.removeButton {
+  border: 2px solid #b5abab;
+  width: 17vw;
+  margin-right: -38vw;
+  margin-left: 0; }
+
+@media (min-width: 480px) {
+  .removeButton {
+    font-size: 2vh; } }
+
+.transactionItem {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey; }
+
+@media (min-width: 480px) {
+  .transactionItem {
+    margin-left: 8vw;
+    margin-right: 14vw; } }
+
+@media (min-width: 600px) {
+  .transactionItem {
+    margin-left: 13vw;
+    margin-right: 19vw; }
+  .removeButton {
+    margin-right: -23vw; } }
+
+@media (min-width: 768px) {
+  .transactionItem {
+    margin-right: 21vw;
+    margin-left: 23vw; }
+  .removeButton {
+    width: 13vw;
+    font-size: 2vh; } }
+
+@media (min-width: 1024px) {
+  .transactionItem {
+    margin-right: 26vw; }
+  .removeButton {
+    width: 11vw;
+    font-size: 2.5vh;
+    margin-right: -25vw; } }
+
+.transactionItemName {
+  margin-left: 3vw;
+  padding-top: 0.5vh; }
+
+.transactionItemEuro {
+  padding-left: 3vw;
+  padding-top: 0.5vh; }
+
+.transactionItemPln {
+  padding-left: 6vw;
+  margin-right: 0;
+  padding-top: 0.5vh; }
+
+/*biggest Transactiom*/
+.biggestTransaction {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.biggestTransactionName {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1vh; }
+
+.biggestTransactionAmount {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1vh; }
+
+/*Sum Transaction*/
+.sumTransaction {
+  text-align: center; }
+
+.sumTransactionPln {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1vh; }
+
+.sumTransactionEuro {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1vh; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%; }
+
+@media (min-width: 400px) {
+  .container {
+    display: flex;
+    flex-direction: row; } }
+
+@media (max-width: 399px) {
+  .container {
+    display: flex;
+    flex-direction: column; } }
