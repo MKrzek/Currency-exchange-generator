@@ -2,13 +2,14 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry : {
-       'public/script.js': './js/project.jsx',
-       'public/css/style.css~' : './sass/style.scss'
+       './public/script.js': './js/project.jsx',
+       './public/css/style.css~' : './sass/style.scss'
       
    },
    output : {
-       path: __dirname+'/',
-       filename: '[name]'
+       path:path.join( __dirname, 'public/'),
+       filename: '[name].js',
+       publicPath: '/public/',
    },
    devServer: {
       inline: true,
@@ -46,7 +47,7 @@ module.exports = {
         ]
     },
     plugins: [
-       new ExtractTextPlugin('.public/css/style.css')
+       new ExtractTextPlugin('./public/css/style.css')
 
    ]
 };
