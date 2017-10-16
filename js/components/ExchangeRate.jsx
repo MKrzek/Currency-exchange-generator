@@ -9,7 +9,7 @@ export default class ExchangeRate extends React.Component{
             loaded: false,
         }
     }
-    componentWillMount(){
+    componentDidMount(){
         fetch('http://api.nbp.pl/api/exchangerates/tables/A/?format=json')
         .then(r=>r.json())
         .then(data=>{
