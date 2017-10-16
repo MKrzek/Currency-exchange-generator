@@ -10,12 +10,14 @@ export default class ExchangeRate extends React.Component{
         }
     }
     componentDidMount(){
-        fetch('http://api.nbp.pl/api/exchangerates/tables/A/?format=json')
+        let apiURL='http://api.nbp.pl/api/exchangerates/tables/A/?format=json';
+        fetch(apiURL)
         .then(r=>r.json())
         .then(data=>{
             console.log ('fetch')
+            const apiExchange=data[0].rates[7].mid;
             this.setState({
-                euro: data[0].rates[7], 
+                euro: apiExchange,
                 loaded: true,
             })
             
