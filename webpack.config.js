@@ -1,5 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const WriteFilePlugin=require('write-file-webpack-plugin');
 module.exports = {
     entry : {
        './public/script.js': './js/project.jsx',
@@ -47,6 +47,7 @@ module.exports = {
     },
     plugins: [
        new ExtractTextPlugin('./public/css/style.css'),
+       new WriteFilePlugin ()
        
        
 

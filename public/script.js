@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "632622b8e34db04c5992"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "572705b7f0d195a333bd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -19752,16 +19752,18 @@ var ExchangeRate = function (_React$Component) {
     }
 
     _createClass(ExchangeRate, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
             var _this2 = this;
 
-            fetch('http://api.nbp.pl/api/exchangerates/tables/A/?format=json').then(function (r) {
+            var apiURL = 'https://api.nbp.pl/api/exchangerates/tables/A/?format=json';
+            fetch(apiURL).then(function (r) {
                 return r.json();
             }).then(function (data) {
                 console.log('fetch');
+                var apiExchange = data[0].rates[7].mid;
                 _this2.setState({
-                    euro: data[0].rates[7],
+                    euro: apiExchange,
                     loaded: true
                 });
             });
@@ -32159,7 +32161,7 @@ var Title = function (_React$Component) {
             return _react2.default.createElement(
                 'h1',
                 { className: 'title' },
-                'Currency Exchange App'
+                'Currency Exchange-Rate App'
             );
         }
     }]);
