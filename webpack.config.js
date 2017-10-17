@@ -8,7 +8,8 @@ module.exports = {
    },
    output : {
        path: __dirname+'/',
-       filename: '[name]'
+       filename: '[name]',
+       publicPath: 'public/'
    },
    devServer: {
       inline: true,

@@ -16,10 +16,12 @@ export default class ExchangeRate extends React.Component{
         .then(data=>{
             console.log ('fetch')
             const apiExchange=data[0].rates[7].mid;
+            console.log (apiExchange)
             this.setState({
                 euro: apiExchange,
                 loaded: true,
             })
+            console.log (this.state.euro)
             
         })
     }
@@ -35,7 +37,8 @@ export default class ExchangeRate extends React.Component{
                 stored=JSON.parse(storedTransactions);
                 render=true;
             }
-        const exchangeRate=this.state.euro['mid']
+        const exchangeRate=this.state.euro
+        console.log (exchangeRate)
         
         return <div >
                <div className='exchangeRate'>

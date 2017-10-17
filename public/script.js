@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "572705b7f0d195a333bd"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a3086b712ea791afe3c9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -716,7 +716,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "public/";
 /******/
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -19762,10 +19762,12 @@ var ExchangeRate = function (_React$Component) {
             }).then(function (data) {
                 console.log('fetch');
                 var apiExchange = data[0].rates[7].mid;
+                console.log(apiExchange);
                 _this2.setState({
                     euro: apiExchange,
                     loaded: true
                 });
+                console.log(_this2.state.euro);
             });
         }
     }, {
@@ -19782,7 +19784,8 @@ var ExchangeRate = function (_React$Component) {
                     stored = JSON.parse(storedTransactions);
                     render = true;
                 }
-                var exchangeRate = this.state.euro['mid'];
+                var exchangeRate = this.state.euro;
+                console.log(exchangeRate);
 
                 return _react2.default.createElement(
                     'div',
