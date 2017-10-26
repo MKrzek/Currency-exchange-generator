@@ -38,6 +38,25 @@ body {
   margin-left: 20vw;
   margin-right: 20vw; }
 
+label {
+  margin-left: 10vw;
+  margin-right: 1vw; }
+
+input {
+  margin-left: 1vw; }
+
+@media (max-width: 808px) {
+  .transactionEuroAmount {
+    margin-left: 7.5vw; } }
+
+@media (max-width: 808px) {
+  label {
+    margin-left: 20vw; } }
+
+@media (max-width: 808px) {
+  .btn-primary {
+    margin-left: 46vw; } }
+
 .transactionName {
   font-size: 2vh;
   margin-left: 6vw; }
