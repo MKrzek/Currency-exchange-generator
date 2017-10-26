@@ -4,10 +4,21 @@ button{
    
 }
 body{
-    background-color: rgb(73.7%, 56.1%, 56.1%);
+    background-color: rgb(41.2%, 41.2%, 41.2%);
 }
 
-
+.btn-primary{
+    height: 7vh;
+    margin-left: 39vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.btn-success{
+    height: 7vh;
+    margin-left: 31vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
 .title{
     text-align: center;
     padding-top: 3vw;
@@ -20,10 +31,11 @@ body{
     border: 2px solid rgb(181, 171, 171);
     margin-left: 20vw;
     margin-right:20vw;
+    
 }
 .transactionName{
-    margin-bottom: 1vh;
-    margin-top: 1vh;
+    
+    font-size: 2vh;
     margin-left:6vw;
     
 }

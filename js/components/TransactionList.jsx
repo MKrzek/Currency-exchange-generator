@@ -1,6 +1,7 @@
 import React from 'react';
 import AddTransaction from './AddTransaction.jsx';
 import TransactionItem from './TransactionItem.jsx';
+import {Pagelayout} from 'react-bootstrap';
 
 export default class TransactionList extends React.Component{
     constructor (props){
@@ -19,7 +20,7 @@ export default class TransactionList extends React.Component{
 
         
 
-        return <ol>
+        return <ol className="table table-striped table-hover ">
                {transactionItems}
                </ol>
     }

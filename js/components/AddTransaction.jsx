@@ -3,6 +3,7 @@ import TransactionList from './TransactionList.jsx';
 import ExchangeRate from './ExchangeRate.jsx';
 import BiggestTransaction from './BiggestTransaction.jsx';
 import TransactionSum from './TransactionSum.jsx';
+import {Buttons, Forms} from 'react-bootstrap';
 
 export default class AddTransaction extends React.Component{
    constructor(props){
@@ -72,18 +73,18 @@ handleRemoveTransaction= (name) =>{
    render(){
    
        return <div> 
-                 <form className='container'>
+                 <form>
                    
-                    <label className='transactionName'>Name of the transaction:
-                        <input className='transactionNameInput' type='text' value={this.state.name} onChange={this.handleNameChange}/>
+                    <label>Name of the transaction:
+                        <input  type='text' value={this.state.name} onChange={this.handleNameChange}/>
                     </label>
-                    <label className='euroAmount'>Amount in Euros:
+                    <label >Amount in Euros:
                         <input className='transactionEuroAmount' type='number' min='0' value={this.state.EURO} onChange={this.handleAmountChange}/>
                     </label>   
-                    </form>
+                </form>
                
                 <div>
-                      <button  className='calculateButton' onClick={this.handleAmountCalculate}>Calculate</button>
+                      <button  className="btn btn-primary" onClick={this.handleAmountCalculate}>Calculate</button>
                 </div>
                 <div>
                     <label className='zlotysAmount'>Amount in Zlotys:
@@ -93,7 +94,7 @@ handleRemoveTransaction= (name) =>{
                     </label>
                 </div>
                 <div>
-                    <button  className='submitButton' type='submit' onClick={this.handleAdd}>Add to the transaction list</button>
+                    <button  className="btn btn-success" type='submit' onClick={this.handleAdd}>Add to the transaction list</button>
                 </div>
                <div>
                     <TransactionList transactions={this.state.transactions} removeTransaction={this.handleRemoveTransaction} />

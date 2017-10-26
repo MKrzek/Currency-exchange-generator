@@ -41,7 +41,7 @@ export default class ExchangeRate extends React.Component{
         console.log (exchangeRate)
         
         return <div >
-               <div className='exchangeRate'>
+               <div className='exchangeRate text-warning'>
                1 EURO costs {exchangeRate} PLN
                </div>
                <AddTransaction exchangeRate={exchangeRate} storedTransactions={stored} render={render}/>

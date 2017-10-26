@@ -11,7 +11,19 @@ button {
   height: 4vh; }
 
 body {
-  background-color: rosybrown; }
+  background-color: dimgray; }
+
+.btn-primary {
+  height: 7vh;
+  margin-left: 39vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh; }
+
+.btn-success {
+  height: 7vh;
+  margin-left: 31vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh; }
 
 .title {
   text-align: center;
@@ -27,8 +39,7 @@ body {
   margin-right: 20vw; }
 
 .transactionName {
-  margin-bottom: 1vh;
-  margin-top: 1vh;
+  font-size: 2vh;
   margin-left: 6vw; }
 
 @media (min-width: 480px) {
