@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "65527471a3eae2e1c3e0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "843ac9a932073d946748"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -8909,7 +8909,7 @@ var AddTransaction = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'label',
-                        null,
+                        { className: 'euroLabel' },
                         'Amount in Euros:',
                         _react2.default.createElement('input', { className: 'transactionEuroAmount', type: 'number', min: '0', value: this.state.EURO, onChange: this.handleAmountChange })
                     )

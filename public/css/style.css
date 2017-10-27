@@ -40,7 +40,8 @@ body {
 
 label {
   margin-left: 10vw;
-  margin-right: 1vw; }
+  margin-right: 1vw;
+  font-size: 3vh; }
 
 input {
   margin-left: 1vw; }
@@ -52,6 +53,35 @@ input {
 @media (max-width: 808px) {
   label {
     margin-left: 20vw; } }
+
+@media (min-width: 1000px) {
+  label {
+    margin-left: 4vw; } }
+
+@media (min-width: 1100px) {
+  label {
+    margin-left: 9vw; } }
+
+@media (min-width: 1150px) {
+  label {
+    margin-left: 7vw; }
+  .euroLabel {
+    margin-left: 5vw; } }
+
+@media (min-width: 1200px) {
+  label {
+    margin-left: 8vw; }
+  .euroLabel {
+    margin-left: 4vw; } }
+
+@media (min-width: 1440px) {
+  label {
+    margin-left: 9vw; }
+  .euroLabel {
+    margin-left: 4vw; }
+  .exchangeRate {
+    height: 2vh;
+    font-size: 2vh; } }
 
 @media (max-width: 808px) {
   .btn-primary {
