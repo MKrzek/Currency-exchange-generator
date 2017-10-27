@@ -80,8 +80,14 @@ input {
   .euroLabel {
     margin-left: 4vw; }
   .exchangeRate {
-    height: 2vh;
-    font-size: 2vh; } }
+    height: 5vh;
+    font-size: 3vh; }
+  .btn-primary {
+    font-size: 3vh;
+    margin-left: 44vw; }
+  .btn-success {
+    font-size: 3vh;
+    margin-left: 38vw; } }
 
 @media (max-width: 808px) {
   .btn-primary {
