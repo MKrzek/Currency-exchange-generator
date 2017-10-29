@@ -190,7 +190,7 @@ input{margin-left: 1vw;
             margin-left:40vw;
         }
 }
-    @media (min-width: 1500px){
+    @media (min-width: 2560px){
         label{
             margin-left: 4vw;
         }
@@ -200,12 +200,14 @@ input{margin-left: 1vw;
         .btn-success{
             margin-left: 36vw;
         }
+        .btn-primary{
+            margin-left: 43vw;
+        }
         .transactionItem{
             margin-left: 18vw;
             margin-right: auto;
-            
-        }
-    }
+         }
+}
 
 .transactionName{
     font-size: 2vh;
