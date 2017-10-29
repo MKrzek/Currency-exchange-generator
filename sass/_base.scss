@@ -106,16 +106,19 @@ input{margin-left: 1vw;
         font-size: 4vw;
         font-weight: bold;
     }
-    label{
-        margin-left: 4vw;
+    .inputName{
+        margin-left: 16vw;
     } 
+    .euroLabel{
+        margin-left: 0;
+    }
     .btn-primary{
         font-size: 3vh;
-        margin-left: 37vw;
+        margin-left: 45vw;
     }
     .btn-success{
         font-size: 3vh;
-        margin-left: 22vw;
+        margin-left: 37vw;
 
     }
     .exchangeRate{
@@ -126,7 +129,7 @@ input{margin-left: 1vw;
         margin-left: 14vw;
     }
     .zlotysAmount{
-        margin-left:29vw;
+        margin-left:43vw;
     }
     .transactionItem{
         margin-right: 26vw;
@@ -147,26 +150,8 @@ input{margin-left: 1vw;
 
 
 }
-@media (min-width: 1100px){
-    label{
-        margin-left: 4vw;
-    } 
-}
-@media (min-width: 1150px){
-    label{
-        margin-left: 4vw;
-    }
-    .euroLabel{
-        margin-left: 1vw;
-    }
-}
-@media (min-width: 1200px){
-    label{
-        margin-left: 4vw;
-    }
-    .euroLabel{
-        margin-left: 0vw;
-    }}
+
+
 @media (min-width: 1440px){
         label{
             margin-left: 3vw;
@@ -191,11 +176,12 @@ input{margin-left: 1vw;
         }
 }
     @media (min-width: 2560px){
-        label{
+        .inputName{
             margin-left: 4vw;
         }
         .euroLabel{
-            margin-left: 0vw;
+            margin-right: 0;
+            margin-left: 0;
         }
         .btn-success{
             margin-left: 36vw;

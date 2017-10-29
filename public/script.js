@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "32b96cae40802761fbe1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "55c6639a9c427816dc12"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -8909,7 +8909,7 @@ var AddTransaction = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                         'label',
-                        null,
+                        { className: 'inputName' },
                         'Name of the transaction:',
                         _react2.default.createElement('input', { type: 'text', value: this.state.name, onChange: this.handleNameChange })
                     ),

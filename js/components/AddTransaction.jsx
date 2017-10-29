@@ -78,7 +78,7 @@ handleRemoveTransaction= (name) =>{
        return <div> 
                  <form>
                    
-                    <label>Name of the transaction:
+                    <label className='inputName'>Name of the transaction:
                         <input  type='text' value={this.state.name} onChange={this.handleNameChange}/>
                     </label>
                     <label className='euroLabel'>Amount in Euros:
