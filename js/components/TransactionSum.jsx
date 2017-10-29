@@ -20,11 +20,11 @@ export default class TransactionSum extends React.Component{
          return null
      }else{
         return <div className='sumTransaction'>
-                  <div>
+                  <div className='text-success'>
                     The sum of all PLN transactions:
                           <div className='sumTransactionPln'>{sumPLN}</div>
                   </div>
-                  <div>
+                  <div className='text-info'>
                       The sum in of all EURO transactions: 
                          <div className='sumTransactionEuro'>{sumEURO}</div>
                   </div>

@@ -46,11 +46,11 @@ export default class BiggestTransaction extends React.Component{
             return null
             }else{
                 return <div className='biggestTransaction'>
-                     <div>
+                     <div className='text-danger'>
                          The biggest transaction in PLN:
                            <div className='biggestTransactionName'>{maxName}</div>
                      </div>
-                     <div>
+                     <div className='text-warning'>
                          The value of the biggest transaction in PLN 
                              <div className='biggestTransactionAmount'>{maxPLN} </div>
                      </div>

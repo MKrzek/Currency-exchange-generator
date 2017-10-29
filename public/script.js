@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d4722e558e69518861d0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "92e1096af7427bc63750"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -8807,11 +8807,11 @@ var _BiggestTransaction = __webpack_require__(535);
 
 var _BiggestTransaction2 = _interopRequireDefault(_BiggestTransaction);
 
-var _CalculatedAmount = __webpack_require__(543);
+var _CalculatedAmount = __webpack_require__(536);
 
 var _CalculatedAmount2 = _interopRequireDefault(_CalculatedAmount);
 
-var _TransactionSum = __webpack_require__(536);
+var _TransactionSum = __webpack_require__(537);
 
 var _TransactionSum2 = _interopRequireDefault(_TransactionSum);
 
@@ -52055,7 +52055,7 @@ var BiggestTransaction = function (_React$Component) {
                     { className: 'biggestTransaction' },
                     _react2.default.createElement(
                         'div',
-                        null,
+                        { className: 'text-danger' },
                         'The biggest transaction in PLN:',
                         _react2.default.createElement(
                             'div',
@@ -52065,7 +52065,7 @@ var BiggestTransaction = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        null,
+                        { className: 'text-warning' },
                         'The value of the biggest transaction in PLN',
                         _react2.default.createElement(
                             'div',
@@ -52086,98 +52086,6 @@ exports.default = BiggestTransaction;
 
 /***/ }),
 /* 536 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _AddTransaction = __webpack_require__(92);
-
-var _AddTransaction2 = _interopRequireDefault(_AddTransaction);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var TransactionSum = function (_React$Component) {
-    _inherits(TransactionSum, _React$Component);
-
-    function TransactionSum(props) {
-        _classCallCheck(this, TransactionSum);
-
-        return _possibleConstructorReturn(this, (TransactionSum.__proto__ || Object.getPrototypeOf(TransactionSum)).call(this, props));
-    }
-
-    _createClass(TransactionSum, [{
-        key: 'render',
-        value: function render() {
-            var sumPLN = 0;
-            for (var i = 0; i < this.props.transactions.length; i++) {
-                sumPLN = (parseFloat(sumPLN) + parseFloat(this.props.transactions[i].PLN)).toFixed(2);
-            }
-            var sumEURO = 0;
-            for (var _i = 0; _i < this.props.transactions.length; _i++) {
-                sumEURO = parseInt(sumEURO) + parseInt(this.props.transactions[_i].EURO);
-            }
-
-            if (this.props.render == false || this.props.transactions.length === 0) {
-                return null;
-            } else {
-                return _react2.default.createElement(
-                    'div',
-                    { className: 'sumTransaction' },
-                    _react2.default.createElement(
-                        'div',
-                        null,
-                        'The sum of all PLN transactions:',
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'sumTransactionPln' },
-                            sumPLN
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        null,
-                        'The sum in of all EURO transactions:',
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'sumTransactionEuro' },
-                            sumEURO
-                        )
-                    )
-                );
-            }
-        }
-    }]);
-
-    return TransactionSum;
-}(_react2.default.Component);
-
-exports.default = TransactionSum;
-
-/***/ }),
-/* 537 */,
-/* 538 */,
-/* 539 */,
-/* 540 */,
-/* 541 */,
-/* 542 */,
-/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52249,6 +52157,92 @@ var CalculatedAmount = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = CalculatedAmount;
+
+/***/ }),
+/* 537 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _AddTransaction = __webpack_require__(92);
+
+var _AddTransaction2 = _interopRequireDefault(_AddTransaction);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TransactionSum = function (_React$Component) {
+    _inherits(TransactionSum, _React$Component);
+
+    function TransactionSum(props) {
+        _classCallCheck(this, TransactionSum);
+
+        return _possibleConstructorReturn(this, (TransactionSum.__proto__ || Object.getPrototypeOf(TransactionSum)).call(this, props));
+    }
+
+    _createClass(TransactionSum, [{
+        key: 'render',
+        value: function render() {
+            var sumPLN = 0;
+            for (var i = 0; i < this.props.transactions.length; i++) {
+                sumPLN = (parseFloat(sumPLN) + parseFloat(this.props.transactions[i].PLN)).toFixed(2);
+            }
+            var sumEURO = 0;
+            for (var _i = 0; _i < this.props.transactions.length; _i++) {
+                sumEURO = parseInt(sumEURO) + parseInt(this.props.transactions[_i].EURO);
+            }
+
+            if (this.props.render == false || this.props.transactions.length === 0) {
+                return null;
+            } else {
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'sumTransaction' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'text-success' },
+                        'The sum of all PLN transactions:',
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'sumTransactionPln' },
+                            sumPLN
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'text-info' },
+                        'The sum in of all EURO transactions:',
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'sumTransactionEuro' },
+                            sumEURO
+                        )
+                    )
+                );
+            }
+        }
+    }]);
+
+    return TransactionSum;
+}(_react2.default.Component);
+
+exports.default = TransactionSum;
 
 /***/ })
 /******/ ]);

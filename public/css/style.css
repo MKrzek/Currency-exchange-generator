@@ -50,6 +50,15 @@ input {
   .transactionEuroAmount {
     margin-left: 7.5vw; } }
 
+@media (min-width: 808px) {
+  .btn-primary {
+    font-size: 3vh; }
+  .btn-success {
+    font-size: 3vh; }
+  .exchangeRate {
+    height: 5vh;
+    font-size: 3vh; } }
+
 @media (max-width: 808px) {
   label {
     margin-left: 20vw; } }
@@ -75,7 +84,7 @@ input {
   label {
     margin-left: 7vw; }
   .euroLabel {
-    margin-left: 5vw; } }
+    margin-left: 2vw; } }
 
 @media (min-width: 1200px) {
   label {
@@ -85,7 +94,7 @@ input {
 
 @media (min-width: 1440px) {
   label {
-    margin-left: 9vw; }
+    margin-left: 14vw; }
   .euroLabel {
     margin-left: 4vw; }
   .exchangeRate {
@@ -191,7 +200,6 @@ input {
 @media (min-width: 768px) {
   .submitButton {
     font-size: 2.5vh;
-    width: 29vw;
     margin-left: 36vw; } }
 
 /*Transaction Item*/
@@ -235,14 +243,13 @@ input {
     margin-right: 21vw;
     margin-left: 23vw; }
   .removeButton {
-    width: 13vw;
-    font-size: 2vh; } }
+    width: 6vw;
+    font-size: 2.5vh; } }
 
 @media (min-width: 1024px) {
   .transactionItem {
     margin-right: 26vw; }
   .removeButton {
-    width: 11vw;
     font-size: 2.5vh;
     margin-right: -25vw; } }
 
