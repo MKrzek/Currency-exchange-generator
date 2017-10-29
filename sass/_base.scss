@@ -118,7 +118,7 @@ input{margin-left: 1vw;
     }
     .btn-success{
         font-size: 3vh;
-        margin-left: 37vw;
+        margin-left: 39vw;
 
     }
     .exchangeRate{
@@ -129,17 +129,16 @@ input{margin-left: 1vw;
         margin-left: 14vw;
     }
     .zlotysAmount{
-        margin-left:43vw;
-    }
-    .transactionItem{
-        margin-right: 26vw;
+        margin-left:44vw;
     }
     .removeButton{
         font-size:2.5vh;
         margin-right: -25vw;
     }
-    .transactionItem{
+    li.transactionItem{
         font-size: 3vh;
+        margin-left: 20vw;
+        margin-right: 20vw;
     }
     .biggestTransaction{
         font-size: 3vh;
