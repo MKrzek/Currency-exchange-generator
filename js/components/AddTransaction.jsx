@@ -2,6 +2,7 @@ import React from 'react';
 import TransactionList from './TransactionList.jsx';
 import ExchangeRate from './ExchangeRate.jsx';
 import BiggestTransaction from './BiggestTransaction.jsx';
+import CalculatedAmount from './CalculatedAmount.jsx';
 import TransactionSum from './TransactionSum.jsx';
 import {Buttons, Forms} from 'react-bootstrap';
 
@@ -13,6 +14,7 @@ export default class AddTransaction extends React.Component{
            EURO:'',
            PLN:'',
            render: this.props.render,
+           calculatedRender: false,
            transactions:this.props.storedTransactions,
        }
        
@@ -39,6 +41,7 @@ handleAmountCalculate=(e)=>{
     e.preventDefault()
     this.setState({
         PLN: (this.state.EURO * this.props.exchangeRate).toFixed(2),
+        calculatedRender: true,
     })
     
 }
@@ -71,7 +74,7 @@ handleRemoveTransaction= (name) =>{
 
 
    render(){
-   
+
        return <div> 
                  <form>
                    
@@ -82,20 +85,11 @@ handleRemoveTransaction= (name) =>{
                         <input className='transactionEuroAmount' type='number' min='0' value={this.state.EURO} onChange={this.handleAmountChange}/>
                     </label>   
                 </form>
-               
                 <div>
-                      <button  className="btn btn-primary" onClick={this.handleAmountCalculate}>Calculate</button>
+                 <button  className="btn btn-primary" onClick={this.handleAmountCalculate}>Calculate</button>
                 </div>
-                <div>
-                    <label className='zlotysAmount'>Amount in Zlotys:
-                         <div className='zlotysAmountCalculated'>
-                                 {this.state.PLN}
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <button  className="btn btn-success" type='submit' onClick={this.handleAdd}>Add to the transaction list</button>
-                </div>
+                {this.state.calculatedRender? (<CalculatedAmount  PLN={this.state.PLN} handleAdd={this.handleAdd}/>): null}
+                
                <div>
                     <TransactionList transactions={this.state.transactions} removeTransaction={this.handleRemoveTransaction} />
                 </div>

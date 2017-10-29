@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "1f4f105987c1eea1bb85"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d4722e558e69518861d0"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -8807,6 +8807,10 @@ var _BiggestTransaction = __webpack_require__(535);
 
 var _BiggestTransaction2 = _interopRequireDefault(_BiggestTransaction);
 
+var _CalculatedAmount = __webpack_require__(543);
+
+var _CalculatedAmount2 = _interopRequireDefault(_CalculatedAmount);
+
 var _TransactionSum = __webpack_require__(536);
 
 var _TransactionSum2 = _interopRequireDefault(_TransactionSum);
@@ -8849,7 +8853,8 @@ var AddTransaction = function (_React$Component) {
         _this.handleAmountCalculate = function (e) {
             e.preventDefault();
             _this.setState({
-                PLN: (_this.state.EURO * _this.props.exchangeRate).toFixed(2)
+                PLN: (_this.state.EURO * _this.props.exchangeRate).toFixed(2),
+                calculatedRender: true
             });
         };
 
@@ -8885,6 +8890,7 @@ var AddTransaction = function (_React$Component) {
             EURO: '',
             PLN: '',
             render: _this.props.render,
+            calculatedRender: false,
             transactions: _this.props.storedTransactions
         };
 
@@ -8923,29 +8929,7 @@ var AddTransaction = function (_React$Component) {
                         'Calculate'
                     )
                 ),
-                _react2.default.createElement(
-                    'div',
-                    null,
-                    _react2.default.createElement(
-                        'label',
-                        { className: 'zlotysAmount' },
-                        'Amount in Zlotys:',
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'zlotysAmountCalculated' },
-                            this.state.PLN
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    null,
-                    _react2.default.createElement(
-                        'button',
-                        { className: 'btn btn-success', type: 'submit', onClick: this.handleAdd },
-                        'Add to the transaction list'
-                    )
-                ),
+                this.state.calculatedRender ? _react2.default.createElement(_CalculatedAmount2.default, { PLN: this.state.PLN, handleAdd: this.handleAdd }) : null,
                 _react2.default.createElement(
                     'div',
                     null,
@@ -19501,7 +19485,7 @@ var TransactionList = function (_React$Component) {
 
             return _react2.default.createElement(
                 'ol',
-                { className: 'table table-striped table-hover ' },
+                null,
                 transactionItems
             );
         }
@@ -40042,7 +40026,7 @@ var TransactionItem = function (_React$Component) {
                     _react2.default.createElement(
                         'button',
                         { className: 'removeButton', onClick: this.handleRemoveClick },
-                        'Remove'
+                        'X'
                     )
                 )
             );
@@ -52185,6 +52169,86 @@ var TransactionSum = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = TransactionSum;
+
+/***/ }),
+/* 537 */,
+/* 538 */,
+/* 539 */,
+/* 540 */,
+/* 541 */,
+/* 542 */,
+/* 543 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CalculatedAmount = function (_React$Component) {
+  _inherits(CalculatedAmount, _React$Component);
+
+  function CalculatedAmount() {
+    _classCallCheck(this, CalculatedAmount);
+
+    return _possibleConstructorReturn(this, (CalculatedAmount.__proto__ || Object.getPrototypeOf(CalculatedAmount)).apply(this, arguments));
+  }
+
+  _createClass(CalculatedAmount, [{
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'label',
+            { className: 'zlotysAmount' },
+            'Amount in Zlotys:',
+            _react2.default.createElement(
+              'div',
+              { className: 'zlotysAmountCalculated' },
+              this.props.PLN
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'button',
+            { className: 'btn btn-success', type: 'submit',
+              onClick: this.props.handleAdd },
+            'Add to the transaction list'
+          )
+        )
+      );
+    }
+  }]);
+
+  return CalculatedAmount;
+}(_react2.default.Component);
+
+exports.default = CalculatedAmount;
 
 /***/ })
 /******/ ]);

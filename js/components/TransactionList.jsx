@@ -20,7 +20,7 @@ export default class TransactionList extends React.Component{
 
         
 
-        return <ol className="table table-striped table-hover ">
+        return <ol>
                {transactionItems}
                </ol>
     }
