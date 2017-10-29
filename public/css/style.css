@@ -15,13 +15,13 @@ body {
 
 .btn-primary {
   height: 7vh;
-  margin-left: 39vw;
+  margin-left: 32vw;
   margin-top: 2vh;
   margin-bottom: 2vh; }
 
 .btn-success {
   height: 7vh;
-  margin-left: 31vw;
+  margin-left: 18vw;
   margin-top: 2vh;
   margin-bottom: 2vh; }
 
@@ -46,70 +46,123 @@ label {
 input {
   margin-left: 1vw; }
 
-@media (max-width: 808px) {
-  .transactionEuroAmount {
-    margin-left: 7.5vw; } }
-
-@media (min-width: 808px) {
+@media (min-width: 768px) {
+  label {
+    margin-left: 25vw; }
   .btn-primary {
-    font-size: 3vh; }
+    font-size: 3vh;
+    margin-left: 37vw; }
   .btn-success {
-    font-size: 3vh; }
+    font-size: 3vh;
+    margin-left: 22vw; }
   .exchangeRate {
     height: 5vh;
-    font-size: 3vh; } }
+    font-size: 3vh; }
+  .transactionName {
+    margin-left: 5vw;
+    font-size: 3vh; }
+  .euroAmount {
+    font-size: 3vh;
+    margin-left: 6vw; }
+  .euroLabel {
+    margin-right: 15vw; }
+  .calculateButton {
+    font-size: 2.5vh;
+    width: 16vw;
+    margin-left: 43vw; }
+  .transactionItem {
+    margin-right: 21vw;
+    margin-left: 23vw; }
+  .removeButton {
+    width: 6vw;
+    font-size: 2.5vh; }
+  .zlotysAmount {
+    margin-left: 31vw;
+    font-size: 3vh; }
+  .submitButton {
+    font-size: 2.5vh;
+    margin-left: 36vw; }
+  .transactionItem {
+    font-size: 2vh; }
+  .biggestTransaction {
+    font-size: 2vh; }
+  .sumTransaction {
+    font-size: 2vh; } }
 
-@media (max-width: 808px) {
-  label {
-    margin-left: 20vw; } }
-
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
+  .title {
+    font-size: 4vw;
+    font-weight: bold; }
   label {
     margin-left: 4vw; }
+  .btn-primary {
+    font-size: 3vh;
+    margin-left: 37vw; }
+  .btn-success {
+    font-size: 3vh;
+    margin-left: 22vw; }
+  .exchangeRate {
+    height: 5vh;
+    font-size: 3vh; }
+  .transactionName {
+    margin-left: 14vw; }
+  .zlotysAmount {
+    margin-left: 29vw; }
+  .transactionItem {
+    margin-right: 26vw; }
+  .removeButton {
+    font-size: 2.5vh;
+    margin-right: -25vw; }
+  .transactionItem {
+    font-size: 3vh; }
+  .biggestTransaction {
+    font-size: 3vh; }
+  .sumTransaction {
+    font-size: 3vh; } }
+
+@media (min-width: 1100px) {
+  label {
+    margin-left: 4vw; } }
+
+@media (min-width: 1150px) {
+  label {
+    margin-left: 4vw; }
+  .euroLabel {
+    margin-left: 1vw; } }
+
+@media (min-width: 1200px) {
+  label {
+    margin-left: 4vw; }
+  .euroLabel {
+    margin-left: 0vw; } }
+
+@media (min-width: 1440px) {
+  label {
+    margin-left: 3vw; }
+  .euroLabel {
+    margin-left: 0vw; }
+  .exchangeRate {
+    height: 5vh;
+    font-size: 3vh; }
   .btn-primary {
     font-size: 3vh;
     margin-left: 44vw; }
   .btn-success {
     font-size: 3vh;
     margin-left: 38vw; }
-  .exchangeRate {
-    height: 5vh;
-    font-size: 3vh; } }
+  .zlotysAmount {
+    margin-left: 40vw; } }
 
-@media (min-width: 1100px) {
+@media (min-width: 1500px) {
   label {
-    margin-left: 9vw; } }
-
-@media (min-width: 1150px) {
-  label {
-    margin-left: 7vw; }
-  .euroLabel {
-    margin-left: 2vw; } }
-
-@media (min-width: 1200px) {
-  label {
-    margin-left: 8vw; }
-  .euroLabel {
-    margin-left: 4vw; } }
-
-@media (min-width: 1440px) {
-  label {
-    margin-left: 14vw; }
-  .euroLabel {
     margin-left: 4vw; }
-  .exchangeRate {
-    height: 5vh;
-    font-size: 3vh; }
-  .btn-primary {
-    font-size: 3vh;
-    margin-left: 44vw; }
+  .euroLabel {
+    margin-left: 0vw; }
   .btn-success {
-    font-size: 3vh;
-    margin-left: 38vw; } }
-
-@media (max-width: 808px) {
-  .btn-primary {
-    margin-left: 46vw; } }
+    margin-left: 36vw; }
+  .transactionItem {
+    margin-left: 18vw;
+    margin-right: auto; } }
 
 .transactionName {
   font-size: 2vh;
@@ -123,14 +176,6 @@ input {
   .transactionName {
     margin-left: 12vw; } }
 
-@media (min-width: 768px) {
-  .transactionName {
-    margin-left: 5vw;
-    font-size: 3vh; }
-  .euroAmount {
-    font-size: 3vh;
-    margin-left: 6vw; } }
-
 @media (min-width: 800px) {
   .transactionName {
     margin-left: 8vw; } }
@@ -138,12 +183,6 @@ input {
 @media (min-width: 900px) {
   .transactionName {
     margin-left: 13vw; } }
-
-@media (min-width: 1024px) {
-  .transactionName {
-    margin-left: 14vw; }
-  .zlotysAmount {
-    margin-left: 44vw; } }
 
 .transactionNameInput {
   margin-top: 1vh;
@@ -156,7 +195,8 @@ input {
 
 .transactionEuroAmount {
   margin-top: 1vh;
-  margin-bottom: 1vh; }
+  margin-bottom: 1vh;
+  margin-left: 1vw; }
 
 .calculateButton {
   border: 2px solid #b5abab;
@@ -164,24 +204,6 @@ input {
   margin-bottom: 2vh;
   font-size: 2vh;
   width: 24vw; }
-
-@media (min-width: 768px) {
-  .calculateButton {
-    font-size: 2.5vh;
-    width: 16vw;
-    margin-left: 43vw; } }
-
-.zlotysAmount {
-  margin-left: 30vw; }
-
-@media (min-width: 480px) {
-  .zlotysAmount {
-    margin-left: 37vw; } }
-
-@media (min-width: 768px) {
-  .zlotysAmount {
-    margin-left: 42vw;
-    font-size: 3vh; } }
 
 .zlotysAmountCalculated {
   margin-top: 2vh;
@@ -197,11 +219,6 @@ input {
   font-size: 2vh;
   height: 7vh; }
 
-@media (min-width: 768px) {
-  .submitButton {
-    font-size: 2.5vh;
-    margin-left: 36vw; } }
-
 /*Transaction Item*/
 .removeButtonSpan {
   text-align: right;
@@ -210,7 +227,7 @@ input {
 
 .removeButton {
   border: 2px solid #b5abab;
-  margin-right: -38vw;
+  margin-right: -20vw;
   margin-left: 0;
   border-radius: 50%; }
 
@@ -237,21 +254,6 @@ input {
     margin-right: 19vw; }
   .removeButton {
     margin-right: -23vw; } }
-
-@media (min-width: 768px) {
-  .transactionItem {
-    margin-right: 21vw;
-    margin-left: 23vw; }
-  .removeButton {
-    width: 6vw;
-    font-size: 2.5vh; } }
-
-@media (min-width: 1024px) {
-  .transactionItem {
-    margin-right: 26vw; }
-  .removeButton {
-    font-size: 2.5vh;
-    margin-right: -25vw; } }
 
 .transactionItemName {
   margin-left: 3vw;
