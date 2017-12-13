@@ -13,6 +13,26 @@ button {
 body {
   background-color: dimgray; }
 
+.inputForm {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1vh;
+  margin-left: 5vw; }
+
+.nameLabel {
+  margin-bottom: 0;
+  margin-right: 2vw;
+  font-size: 3vh; }
+
+.euroLabel {
+  margin-bottom: 0;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  font-size: 3vh; }
+
+.inputEuroAmount {
+  margin-top: 0; }
+
 .btn-primary {
   height: 7vh;
   margin-left: 32vw;
@@ -38,17 +58,7 @@ body {
   margin-left: 20vw;
   margin-right: 20vw; }
 
-label {
-  margin-left: 10vw;
-  margin-right: 1vw;
-  font-size: 3vh; }
-
-input {
-  margin-left: 1vw; }
-
 @media (min-width: 768px) {
-  label {
-    margin-left: 25vw; }
   .btn-primary {
     font-size: 3vh;
     margin-left: 37vw; }
@@ -64,8 +74,6 @@ input {
   .euroAmount {
     font-size: 3vh;
     margin-left: 6vw; }
-  .euroLabel {
-    margin-right: 15vw; }
   .calculateButton {
     font-size: 2.5vh;
     width: 16vw;
@@ -93,10 +101,8 @@ input {
   .title {
     font-size: 4vw;
     font-weight: bold; }
-  .inputName {
-    margin-left: 16vw; }
   .euroLabel {
-    margin-left: 0; }
+    margin-left: 1vw; }
   .btn-primary {
     font-size: 3vh;
     margin-left: 45vw; }
@@ -123,10 +129,6 @@ input {
     font-size: 3vh; } }
 
 @media (min-width: 1440px) {
-  label {
-    margin-left: 3vw; }
-  .euroLabel {
-    margin-left: 0vw; }
   .exchangeRate {
     height: 5vh;
     font-size: 3vh; }
@@ -140,11 +142,6 @@ input {
     margin-left: 40vw; } }
 
 @media (min-width: 2560px) {
-  .inputName {
-    margin-left: 4vw; }
-  .euroLabel {
-    margin-right: 0;
-    margin-left: 0; }
   .btn-success {
     margin-left: 36vw; }
   .btn-primary {
@@ -181,11 +178,6 @@ input {
   margin-top: 1vh;
   margin-bottom: 1vh;
   margin-left: 10vw; }
-
-.transactionEuroAmount {
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-  margin-left: 1vw; }
 
 .calculateButton {
   border: 2px solid #b5abab;

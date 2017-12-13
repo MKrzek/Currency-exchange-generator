@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "dd5bdfac56039108ebd2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3e3f7221bd657e22d641"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -8905,19 +8905,23 @@ var AddTransaction = function (_React$Component) {
                 'div',
                 null,
                 _react2.default.createElement(
-                    'form',
-                    null,
+                    'div',
+                    { className: 'container' },
                     _react2.default.createElement(
-                        'label',
-                        { className: 'inputName' },
-                        'Name of the transaction:',
-                        _react2.default.createElement('input', { type: 'text', value: this.state.name, onChange: this.handleNameChange })
-                    ),
-                    _react2.default.createElement(
-                        'label',
-                        { className: 'euroLabel' },
-                        'Amount in Euros:',
-                        _react2.default.createElement('input', { className: 'transactionEuroAmount', type: 'number', min: '0', value: this.state.EURO, onChange: this.handleAmountChange })
+                        'form',
+                        { className: 'inputForm' },
+                        _react2.default.createElement(
+                            'label',
+                            { className: 'nameLabel' },
+                            'Name of the transaction:'
+                        ),
+                        _react2.default.createElement('input', { type: 'text', className: 'inputName', value: this.state.name, onChange: this.handleNameChange }),
+                        _react2.default.createElement(
+                            'label',
+                            { className: 'euroLabel' },
+                            'Amount in Euros:'
+                        ),
+                        _react2.default.createElement('input', { className: 'inputEuroAmount', type: 'number', min: '0', value: this.state.EURO, onChange: this.handleAmountChange })
                     )
                 ),
                 _react2.default.createElement(

@@ -75,19 +75,19 @@ handleRemoveTransaction= (name) =>{
 
    render(){
 
-       return <div> 
-                 <form>
-                   
-                    <label className='inputName'>Name of the transaction:
-                        <input  type='text' value={this.state.name} onChange={this.handleNameChange}/>
-                    </label>
-                    <label className='euroLabel'>Amount in Euros:
-                        <input className='transactionEuroAmount' type='number' min='0' value={this.state.EURO} onChange={this.handleAmountChange}/>
-                    </label>   
-                </form>
-                <div>
-                 <button  className="btn btn-primary" onClick={this.handleAmountCalculate}>Calculate</button>
+       return <div>
+                <div className='container'> 
+                     <form className='inputForm'>
+                        <label className='nameLabel'>Name of the transaction:</label>
+                        <input  type='text' className='inputName' value={this.state.name} onChange={this.handleNameChange}/>
+                        <label className='euroLabel'>Amount in Euros:</label>
+                        <input className='inputEuroAmount' type='number' min='0' value={this.state.EURO} onChange={this.handleAmountChange}/>
+                     </form>
                 </div>
+                <div>
+                    <button  className="btn btn-primary" onClick={this.handleAmountCalculate}>Calculate</button>
+                 </div>
+            
                 {this.state.calculatedRender? (<CalculatedAmount  PLN={this.state.PLN} handleAdd={this.handleAdd}/>): null}
                 
                <div>
@@ -100,5 +100,6 @@ handleRemoveTransaction= (name) =>{
                     <TransactionSum transactions={this.state.transactions} render={this.state.render}/>
                 </div>
               </div>
+             
    }
 }
